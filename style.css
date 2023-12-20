@@ -4,6 +4,20 @@
     box-shadow: border-box;
 }
 
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color:#212121; 
+    --secondary-color:#edf2fc; 
+}
+
+.special{
+    color: orangered;
+}
+
 ul {
     list-style: none;
 
@@ -17,7 +31,7 @@ a {
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background: #ddd;
+    background: var(--primary-color);
 }
 
 .grid {
@@ -39,12 +53,13 @@ body {
     padding: 1em 1.5em;
     font-weight: 700;
     transition: 250ms;
-    background: #000;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--primary-color);
 
     &:hover {
-        background: #333;
+        background-color: orangered;
         cursor: pointer;
+        color: #fff;
     }
 }
 
@@ -82,6 +97,7 @@ body {
 
     i {
         font-size: 1.5rem;
+        color: var(--secondary-color);
     }
 
     i:hover {
@@ -102,20 +118,12 @@ body {
 
         .link {
             text-transform: uppercase;
-            color: #333;
+            color: var(--secondary-color);
             transition: 250ms color;
             font-size: 1.125rem;
 
             &:hover {
-                color: #000;
-            }
-        }
-
-        .light-links {
-            color: #fff;
-
-            &:hover {
-                color: #ddd;
+                color: orangered;
             }
         }
 
@@ -136,9 +144,11 @@ body {
 
     .title {
         font-size: 3rem;
+        color : var(--secondary-color);
     }
 
     p {
+        color: var(--secondary-color);
         max-width: 450px;
     }
 
@@ -147,20 +157,6 @@ body {
     }
 }
 
-.dark {
-    background-color: #000;
-    color: #fff;
-}
-
-.light {
-    background-color: #ddd;
-    color: #333;
-
-    &:hover {
-        background: #333;
-        color: #fff;
-    }
-}
 
 @media screen and (width <= 50em) {
     html{
