@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: #ddd;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid--1x2 {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+
+.grid--1x3 {
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    background: 0;
+    padding: 1em 1.5em;
+    font-weight: 700;
+    transition: 250ms;
+    background: #000;
+    color: #fff;
+
+    &:hover {
+        background: #333;
+        cursor: pointer;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+.flow-content--s>*+* {
+    margin-top: .5rem !important;
+}
+
+.flow-content--m>*+* {
+    margin-top: 1rem !important;
+}
+
+.flow-content--xm>*+* {
+    margin-top: 1.5rem !important;
+}
+
+.flow-content--l>*+* {
+    margin-top: 3rem !important;
+}
+
+.flow-content--xl>*+* {
+    margin-top: 3.5rem !important;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    i:hover {
+        cursor: pointer;
+        ;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        color: orangered;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+
+        .link {
+            text-transform: uppercase;
+            color: #333;
+            transition: 250ms color;
+            font-size: 1.125rem;
+
+            &:hover {
+                color: #000;
+            }
+        }
+
+        .light-links {
+            color: #fff;
+
+            &:hover {
+                color: #ddd;
+            }
+        }
+
+        .fa-moon {
+            color: rgb(63, 54, 54);
+        }
+    }
+}
+
+.showcase {
+    display: grid;
+    justify-content: center;
+    padding: 1.5rem 3.5rem;
+    align-items: center;
+    gap: 2.5rem;
+    min-height: calc(100vh - 81.3px);
+
+
+    .title {
+        font-size: 3rem;
+    }
+
+    p {
+        max-width: 450px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.light {
+    background-color: #ddd;
+    color: #333;
+
+    &:hover {
+        background: #333;
+        color: #fff;
+    }
+}
+
+@media screen and (width <= 50em) {
+    html{
+        font-size: .8rem;
+    }
+
+    .grid--1x2{
+        grid-template-columns: 1fr;
+    }
+
+    .showcase{
+        .showcase-img{
+            order: -1;
+        }
+
+        min-height: unset;
+
+        .showcase-contents{
+            text-align: center;
+            p{
+            margin: 0 auto;
+            }
+        }
+    }
+
+    .nav{
+        flex-direction: column;
+    } 
+    
+}
+
+@media screen and (width <= 34.375em) {
+    html{
+        font-size: .6rem;
+    }
+}
